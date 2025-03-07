@@ -164,3 +164,81 @@ namespace ConsoleApp7
 
 }
     */
+
+
+1)	Abstract class nedir ? Interface nedir ? Araştırınız.
+Abstract Class (Soyut Sınıf) Nedir?
+Tamamen veya kısmen tamamlanmış metotlar içerebilir. (Yani hem gövdeli hem de gövdesiz metotlar olabilir.)
+Kendi içinde değişken (field) tanımlayabilir.
+Constructor (kurucu) metodu olabilir.
+Sadece tek bir soyut sınıftan kalıtım (inheritance) alınabilir.
+Bazı metotlarını zorunlu olarak türeyen sınıflara uygulatmak için abstract anahtar kelimesi ile tanımlanır.
+
+Interface (Arayüz) Nedir?
+Sadece metot imzaları içerir (gövde içermez, C# 8.0+ hariç).
+Bir sınıf birden fazla interface'i uygulayabilir. (Çoklu kalıtımı destekler.)
+Sadece public metotlar içerir.
+Sınıflara belli bir kontrat (zorunluluk) getirir.
+
+2)	Abstract class ile interface arasındaki farklar  nelerdir? Araştırınız.
+
+Abstract class = Bazı metotlar ve ortak kodlar içerebilir.
+Interface = Sadece metot imzaları içerir, kurallar belirler.
+
+3)	Abstract class ve interface ile 2’şer örnek yapınız.
+
+1.	 Örnek Abstract 
+
+   abstract class Animal
+
+{
+    public abstract void MakeSound();
+}
+
+class Dog : Animal
+{
+    public override void MakeSound() => Console.WriteLine("Woof Woof!");
+}
+
+2.	Örnek abstract
+abstract class Employee
+{
+    public abstract void Work();
+}
+
+class Developer : Employee
+{
+    public override void Work() => Console.WriteLine("Writing code...");
+}
+
+
+1.	Örnek interface
+
+interface IVehicle
+{
+    void Start();
+}
+
+class Car : IVehicle
+{
+    public void Start() => Console.WriteLine("Car started.");
+}
+
+2.	Örnek interface
+
+interface IPayment
+{
+    void Pay();
+}
+
+class CreditCard : IPayment
+{
+    public void Pay() => Console.WriteLine("Payment via Credit Card.");
+
+
+
+
+
+
+
+
